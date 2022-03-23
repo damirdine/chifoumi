@@ -10,9 +10,9 @@ Les conditions algorithmiques auquel j'ai pensé :
 - si  (choix=choixAleatoire)
    alors on à une égalité
 ----
-- si ( ***p - c***  OU  ***c - f***  OU  ***f - p*** ) 
+- si ( (pierre `VS` ciseaux)  `OU` (ciseaux `VS` feuille) `OU` (feuille `VS` pierre) ) 
      alors le joueur gagne
 -----
-- si (***p - f*** OU ***c - p*** OU ***f - c***)
+- si ((pierre `VS` feuille) `OU`(ciseaux `VS` pierre) `OU`(feuille `VS` ciseaux))
      alors le joueur perd
 -----
