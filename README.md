@@ -8,11 +8,11 @@ Dans cet exercice j'ai eu à utiliser :
 
 Les conditions algorithmiques auquel j'ai pensé :
 - si  (choix=choixAleatoire)
-   alors on à une égalité
+     - alors on à une égalité.
 ----
 - si ( (pierre `VS` ciseaux)  `OU` (ciseaux `VS` feuille) `OU` (feuille `VS` pierre) ) 
-     alors le joueur gagne
+     - alors le joueur gagne.
 -----
 - si ((pierre `VS` feuille) `OU`(ciseaux `VS` pierre) `OU`(feuille `VS` ciseaux))
-     alors le joueur perd
+     - alors le joueur perd.
 -----
