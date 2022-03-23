@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,29 +9,40 @@
     <link rel="stylesheet" href="./src/style.css">
     <title>chifoumi</title>
 </head>
+
 <body>
     <main>
-        <form>
-            <section id="inputs">
-                <div class="input">
-                    <label for="chi"><i class="fa fa-hand-rock-o" aria-hidden="true"></i></label>
-                    <input type="radio" name="chifoumi" id="chi" value="chi">
-                </div>
-                <div class="input">
-                    <label for="fu"><i class="fa fa-hand-paper-o" aria-hidden="true"></i></label>
-                    <input type="radio" name="chifoumi" id="fu" value="fu">
-                </div>
-                <div class="input">
-                    <label for="mi"><i class="fa fa-hand-scissors-o" aria-hidden="true"></i></label>
-                    <input type="radio" name="chifoumi" id="mi" value="mi">
-                </div>
-            </section>
-            <button>Play</button>
-        </form>
-        <div class="result">
-
+        <section id="inputs">
+            <div class="input">
+                <label for="pierre">🤜</label>
+                <input type="radio" required name="chifoumi" id="pierre" value="pierre">
+            </div>
+            <div class="input">
+                <label for="feuille">🤚</label>
+                <input type="radio" required name="chifoumi" id="feuille" value="feuille">
+            </div>
+            <div class="input">
+                <label for="ciseaux">✌️</label>
+                <input type="radio" required name="chifoumi" id="ciseaux" value="ciseaux">
+            </div>
+        </section>
+        <button id="play">Jouer</button>
+        <p id="choixJoueurs"></p>
+        <p id="resultat">resultat : </p>
+        <div class="stats">
+            <p>Stats du joueur :</p>
+            <ul>
+                <li><p id="manche-gagner">Manche gagnés =</p></li>
+                <li><p id="manche-nul">Manche nuls =</p></li>
+                <li><p id="manche-perdu">Manche perdus =</p></li>
+            </ul>
+        </div>
+        <div class="save">
+            <!-- <button id="save">sauvegarder stats</button>
+            <button id="reset" type="reset">renitialiser stats</button> -->
         </div>
     </main>
     <script src="./src/app.js"></script>
 </body>
+
 </html>
