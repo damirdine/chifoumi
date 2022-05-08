@@ -1,49 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/style.css">
-    <title>chifumi</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-    <main>
-        <section id="inputs">
-            <h2>les choix:</h2>
-            <div class="input">
-                <label for="pierre">🤜</label>
-                <input type="radio" required name="chifoumi" id="pierre" value="pierre">
-            </div>
-            <div class="input">
-                <label for="feuille">🤚</label>
-                <input type="radio" required name="chifoumi" id="feuille" value="feuille">
-            </div>
-            <div class="input">
-                <label for="ciseaux">✌️</label>
-                <input type="radio" required name="chifoumi" id="ciseaux" value="ciseaux">
-            </div>
-        </section>
-        <button id="play">Jouer</button>
-        <p id="choixJoueurs"></p>
-        <p id="resultat">resultat : </p>
-        <div class="stats">
-            <p>Stats du joueur :</p>
-            <ul>
-                <li><p id="manche-gagner"></p></li>
-                <li><p id="manche-nul"></p></li>
-                <li><p id="manche-perdu"></p></li>
-            </ul>
-        </div>
-        <div class="save">
-            <button id="save">sauvegarder stats</button>
-            <button id="reset" type="reset">renitialiser stats</button>
-        </div>
-    </main>  
-    <script src="./src/app.js"></script>
+  <input type="button" value="pierre">
+  <input type="button" value="feuille">
+  <input type="button" value="ciseaux">
+  <p id="jeu"></p>
+  <p id="resultat-manche"></p>
+  <p id="stats"></p>
+  <script src="script.js"></script>
 </body>
 
 </html>
