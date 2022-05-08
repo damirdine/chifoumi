@@ -1,6 +1,7 @@
 const choix = ['pierre' , 'feuille', 'ciseaux'];
 let choixJoueur,choixOrdinateur,resultatManche
 let btns = document.querySelectorAll('.choix-joueur')
+let resetBtn = document.querySelector('#reset')
 
 function choixRandom(choixPossible){
   let NbrRandom = Math.floor(Math.random() * choixPossible.length)
@@ -93,3 +94,7 @@ btns.forEach(element =>
     jeu()
   })
 )
+resetBtn.addEventListener('click', () => {
+  localStorage.clear();
+  window.location.reload()
+})
