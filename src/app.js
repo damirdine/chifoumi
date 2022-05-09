@@ -1,7 +1,6 @@
 const choix = ['pierre' , 'feuille', 'ciseaux'];
+
 let choixJoueur,choixOrdinateur,resultatManche
-let btns = document.querySelectorAll('.choix-joueur')
-let resetBtn = document.querySelector('#reset')
 
 function choixRandom(choixPossible){
   let NbrRandom = Math.floor(Math.random() * choixPossible.length)
@@ -39,41 +38,33 @@ function afficherResultat(param){
 
 let mancheGagne,mancheNul,manchePerdu
 
+function ajoutAuCompteur(){
+  if(resultatManche==='Manche Gagné')
+    {
+      mancheGagne +=1
+      localStorage.setItem('winCount',mancheGagne);
+    }
+    if(resultatManche==='Manche Nul'){
+      mancheNul+=1
+      localStorage.setItem('nulCount',mancheNul);
+    }
+    if(resultatManche==='Manche Perdu'){
+      manchePerdu+=1
+      localStorage.setItem('loseCount',manchePerdu);
+    }
+}
+
 function compteur(resultatManche){
   if(localStorage.length==''){
     mancheGagne=0
     mancheNul=0
     manchePerdu=0
-    if(resultatManche==='Manche Gagné')
-    {
-      mancheGagne +=1
-      localStorage.setItem('winCount',mancheGagne);
-    }
-    if(resultatManche==='Manche Nul'){
-      mancheNul+=1
-      localStorage.setItem('nulCount',mancheNul);
-    }
-    if(resultatManche==='Manche Perdu'){
-      manchePerdu+=1
-      localStorage.setItem('loseCount',manchePerdu);
-    }
+    ajoutAuCompteur()
   }else{
     mancheGagne=Number(localStorage.getItem('winCount'))
     mancheNul=Number(localStorage.getItem('nulCount'))
     manchePerdu=Number(localStorage.getItem('loseCount'))
-    if(resultatManche==='Manche Gagné')
-    {
-      mancheGagne +=1
-      localStorage.setItem('winCount',mancheGagne);
-    }
-    if(resultatManche==='Manche Nul'){
-      mancheNul+=1
-      localStorage.setItem('nulCount',mancheNul);
-    }
-    if(resultatManche==='Manche Perdu'){
-      manchePerdu+=1
-      localStorage.setItem('loseCount',manchePerdu);
-    }
+    ajoutAuCompteur()
   }
   return [mancheGagne,mancheNul,manchePerdu]
 }
@@ -83,10 +74,14 @@ function afficherStat(stats){
   statsTxt.textContent = `${mancheGagne} - ${mancheNul} - ${manchePerdu}`
 }
 
+afficherStat(compteur(resultatManche))
+
 function jeu(){
   afficherResultat(manche())
   afficherStat(compteur(resultatManche))
 }
+
+let btns = document.querySelectorAll('.choix-joueur')
 
 btns.forEach(element => 
   element.addEventListener('click', event => {
@@ -94,6 +89,9 @@ btns.forEach(element =>
     jeu()
   })
 )
+  
+let resetBtn = document.querySelector('#reset')
+
 resetBtn.addEventListener('click', () => {
   localStorage.clear();
   window.location.reload()
