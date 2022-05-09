@@ -5,17 +5,35 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>shifumi</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="./src/style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  <input class="choix-joueur" type="button" value="pierre">
-  <input class="choix-joueur" type="button" value="feuille">
-  <input class="choix-joueur" type="button" value="ciseaux">
-  <p id="jeu"></p>
-  <p id="resultat-manche"></p>
-  <p id="stats">0 - 0 - 0</p>
-  <input id="reset" type="reset">
+  <header>
+    <h1>
+      Pierre, <br>
+      Feuille, <br>
+      Ciseaux.
+    </h1>
+    <div class="scores">
+      <h2>SCORES</h2>
+      <p>V - N - D</p>
+      <p id="stats">0 - 0 - 0</p>
+    </div>
+    <input id="reset" type="reset"> 
+  </header>
+
+  <main>
+    <div class="choix">
+      <input class="choix-joueur" type="button" value="pierre">
+      <input class="choix-joueur" type="button" value="feuille">
+      <input class="choix-joueur" type="button" value="ciseaux">
+    </div>
+
+    <p id="jeu"></p>
+    <p id="resultat-manche"></p>
+
+  </main>
   <script src="./src/app.js"></script>
 </body>
 

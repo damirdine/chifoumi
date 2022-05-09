@@ -1,0 +1,41 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 55px;
+    
+}
+header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid black;
+    margin: 0 25%;
+}
+#reset{
+    height: 50px;
+}
+main{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-direction: column;
+    align-items: center;
+}
+main .choix {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.choix-joueur{
+    height:75px;
+    width: 75px;
+}
+@media screen and (max-width:428px) {
+    header{
+        flex-direction: column;
+        padding: 5px;
+        margin: 0 5%;
+    }
+}
