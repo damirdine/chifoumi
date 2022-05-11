@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
     min-height: 100vh;
     display: flex;
@@ -6,6 +12,7 @@ body{
     gap: 55px;
     background : radial-gradient(hsl(214, 47%, 23%),hsl(237, 49%, 15%));
     color: white;
+    font-family: 'Barlow Semi Condensed', sans-serif;
 }
 h1{
     color: white;
@@ -16,6 +23,13 @@ header{
     align-items: center;
     border: 1px solid white;
     margin: 0 25%;
+    height: 150px;
+}
+.scores{
+    text-align: center;
+}
+#stats{
+    font-size: 45px;
 }
 #reset{
     height: 50px;
@@ -32,10 +46,16 @@ main .choix {
     justify-content: space-evenly;
     width: 100%;
 }
-.choix-joueur{
-    height:75px;
-    width: 75px;
+.choix label {
+    padding: 25px;
+    background-color: aliceblue ;
+    border-radius: 25%;
+    border: 5px solid;
 }
+.choix-joueur{
+   display: none;
+}
+
 @media screen and (max-width:428px) {
     header{
         flex-direction: column;

@@ -17,7 +17,7 @@
     </h1>
     <div class="scores">
       <h2>SCORES</h2>
-      <p>V - N - D</p>
+      <!-- <p>V - N - D</p> -->
       <p id="stats">0 - 0 - 0</p>
     </div>
     <input id="reset" type="reset"> 
@@ -25,9 +25,18 @@
 
   <main>
     <div class="choix">
-      <input class="choix-joueur" type="button" value="pierre">
-      <input class="choix-joueur" type="button" value="feuille">
-      <input class="choix-joueur" type="button" value="ciseaux">
+      <label for="pierre">
+        <img src="./src/media/img/icon-rock.svg" alt="">
+      </label>
+      <input class="choix-joueur" type="button" id="pierre" value="pierre">
+      <label for="feuille">
+        <img src="./src/media/img/icon-paper.svg" alt="">
+      </label>
+      <input class="choix-joueur" type="button" id="feuille" value="feuille">
+      <label for="ciseaux">
+        <img src="./src/media/img/icon-scissors.svg" alt="">
+      </label>
+      <input class="choix-joueur" type="button" id="ciseaux" value="ciseaux">
     </div>
 
     <p id="jeu"></p>
