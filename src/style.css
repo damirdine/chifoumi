@@ -32,7 +32,7 @@ header{
     font-size: 45px;
 }
 #reset{
-    height: 50px;
+    padding: 10px;
 }
 main{
     display: flex;
@@ -47,10 +47,13 @@ main .choix {
     width: 100%;
 }
 .choix label {
-    padding: 25px;
+    padding: 15px;
     background-color: aliceblue ;
     border-radius: 25%;
     border: 5px solid;
+}
+.choix label:active {
+    background-color: rgb(154, 232, 232) ;
 }
 .choix-joueur{
    display: none;
@@ -59,7 +62,8 @@ main .choix {
 @media screen and (max-width:428px) {
     header{
         flex-direction: column;
-        padding: 5px;
+        padding: 90px;
         margin: 0 5%;
+        justify-content: space-around;
     }
 }
