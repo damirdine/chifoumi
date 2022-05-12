@@ -31,6 +31,9 @@ header{
 #stats{
     font-size: 45px;
 }
+#stats_win{color: blue;}
+#stats_nul{color: grey;}
+#stats_lose{color: orangered;}
 #reset{
     padding: 10px;
 }

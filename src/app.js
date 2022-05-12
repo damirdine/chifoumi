@@ -71,7 +71,7 @@ function compteur(resultatManche){
 
 function afficherStat(stats){
   let statsTxt = document.querySelector('#stats')
-  statsTxt.textContent = `${mancheGagne} - ${mancheNul} - ${manchePerdu}`
+  statsTxt.innerHTML = `<span id="stats_win">${mancheGagne}<span> - <span id="stats_nul">${mancheNul}<span> - <span id="stats_lose">${manchePerdu}<span>`
 }
 
 afficherStat(compteur(resultatManche))
